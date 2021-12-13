@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a76b987bb22b41c48fa7e0ab03871cf6" Name="Diagram1">
+        <EntityTypeShape EntityType="FoodReviewModel.Account" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodReviewModel.Category" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodReviewModel.Comment" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodReviewModel.Post" Width="1.5" PointX="6" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodReviewModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodReviewModel.Tag" Width="1.5" PointX="8.25" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="FoodReviewModel.FK_Comment_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodReviewModel.FK_Post_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodReviewModel.FK_Comment_Post" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodReviewModel.Post_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodReviewModel.Post_Tag" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

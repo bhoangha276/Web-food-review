@@ -13,16 +13,30 @@ namespace FoodReviewWeb.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Review()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Your Review page.";
+
+            return View();
+        }
+
+        public ActionResult Recipe()
+        {
+            ViewBag.Message = "Your Cooking Recipe page.";
+
+            return View();
+        }
+
+        public ActionResult Intro()
+        {
+            ViewBag.Message = "Your More About Us page.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your Contact page.";
 
             return View();
         }

@@ -132,6 +132,7 @@
     <Compile Include="Areas\Admin\Controllers\AccountsController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PostsController.cs" />
     <Compile Include="Areas\Admin\Data\DTO\User.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -2070,6 +2071,11 @@
     <Content Include="Assets\Admin\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="Assets\Admin\vendor\jquery\jquery.min.map" />
     <Content Include="Assets\Admin\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Areas\Admin\Views\Posts\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Posts\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Posts\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Posts\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Posts\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

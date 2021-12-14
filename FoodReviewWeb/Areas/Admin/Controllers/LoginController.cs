@@ -40,5 +40,11 @@ namespace FoodReviewWeb.Areas.Admin.Controllers
             return View(user);
         }
 
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index");
+        }
+
     }
 }

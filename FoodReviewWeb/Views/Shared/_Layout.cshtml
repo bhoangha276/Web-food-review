@@ -59,7 +59,10 @@
                             @Html.ActionLink("Contact", "Contact", "Home", new { @class = "nav-link" })
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Admin/Login/Logout">Logout</a>
+                            @Html.ActionLink("Detail", "Index", "PostDetail", new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Login/Logout">Logout</a>
                         </li>
                     </ul>
                 </div>

@@ -135,9 +135,11 @@
     <Compile Include="Areas\Admin\Controllers\PostsController.cs" />
     <Compile Include="Areas\Admin\Data\DTO\User.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DTO\User.cs" />
     <Compile Include="Models\Framework\Account.cs">
       <DependentUpon>FoodReview.tt</DependentUpon>
     </Compile>
@@ -2151,6 +2153,7 @@
     <Content Include="Views\Home\Recipe.cshtml" />
     <Content Include="Views\Home\Intro.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -35,7 +35,8 @@
                                     </div>
                                     <div class="down-content">
                                         <span>Healthy</span>
-                                        <a href="post-details.html"><h4>@item.Title</h4></a>
+                                        <a href=""><h4>@item.Title</h4></a>
+                                        @Html.ActionLink("Details", "Detail", new { id = item.ID })
                                         <ul class="post-info">
                                             <li><a href="#">User: @item.Author</a></li>
                                             <li><a href="#">@item.CreateAt</a></li>

@@ -1,8 +1,12 @@
-﻿
+﻿@model FoodReviewWeb.Models.Framework.Account
+
 @{
     ViewBag.Title = "Detail";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+@Html.DisplayNameFor(model => model.Number)
+@Html.DisplayFor(model => model.Number)
 
 <section class="blog-posts grid-system">
     <div class="container">

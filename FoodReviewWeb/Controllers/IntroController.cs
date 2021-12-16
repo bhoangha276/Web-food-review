@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace FoodReviewWeb.Controllers
 {
-    //[Authorize]
-    public class HomeController : Controller
+    public class IntroController : Controller
     {
+        // GET: Intro
         public ActionResult Index()
         {
             return View();

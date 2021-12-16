@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace FoodReviewWeb.Controllers
 {
-    public class PostDetailController : Controller
+    public class ContactController : Controller
     {
-        // GET: PostDetail
+        // GET: Contact
         public ActionResult Index()
         {
             return View();

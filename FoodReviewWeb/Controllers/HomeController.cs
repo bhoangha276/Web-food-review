@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace FoodReviewWeb.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -17,7 +18,11 @@ namespace FoodReviewWeb.Controllers
         {
             ViewBag.Message = "Your Review page.";
 
-            return View();
+            var lst = new List<Models.Framework.Post>();
+            Models.Framework.FoodReviewEntities1 db = new Models.Framework.FoodReviewEntities1();
+            lst = db.Post.OrderByDescending(x => x.ID).ToList();
+
+            return View(lst);
         }
 
         public ActionResult Recipe()

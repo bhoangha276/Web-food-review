@@ -43,20 +43,23 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            @Html.ActionLink("Home", "Index", "Home", new { @class = "nav-link" })
+                            @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })
                             <span class="sr-only">(current)</span>
                         </li>
                         <li class="nav-item">
-                            @Html.ActionLink("Review", "Review", "Home", new { @class = "nav-link" })
+                            @Html.ActionLink("Review", "Review", "Home", null, new { @class = "nav-link" })
                         </li>
                         <li class="nav-item">
-                            @Html.ActionLink("Cooking Recipe", "Recipe", "Home", new { @class = "nav-link" })
+                            @Html.ActionLink("Cooking Recipe", "Recipe", null, "Home", new { @class = "nav-link" })
                         </li>
                         <li class="nav-item">
-                            @Html.ActionLink("More About Us", "Intro", "Home", new { @class = "nav-link" })
+                            @Html.ActionLink("More About Us", "Intro", null, "Home", new { @class = "nav-link" })
                         </li>
                         <li class="nav-item">
-                            @Html.ActionLink("Contact", "Contact", "Home", new { @class = "nav-link" })
+                            @Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Detail", "Index", "PostDetail", null, new { @class = "nav-link" })
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/Login/Logout">Logout</a>

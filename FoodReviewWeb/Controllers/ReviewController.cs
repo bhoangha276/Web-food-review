@@ -28,12 +28,12 @@ namespace FoodReviewWeb.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Account account = db.Account.Find(id);
-            if (account == null)
+            Post post = db.Post.Find(id);
+            if (post == null)
             {
                 return HttpNotFound();
             }
-            return View(account);
+            return View(post);
         }
     }
 }

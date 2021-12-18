@@ -2159,6 +2159,7 @@
     <Content Include="Views\Recipe\Index.cshtml" />
     <Content Include="Views\Review\Index.cshtml" />
     <Content Include="Views\Review\Detail.cshtml" />
+    <Content Include="Views\Home\Logged.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

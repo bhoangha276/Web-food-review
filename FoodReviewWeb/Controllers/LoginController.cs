@@ -28,7 +28,8 @@ namespace FoodReviewWeb.Controllers
                     //Thành công
                     //Lưu trạng thái đăng nhập
                     FormsAuthentication.SetAuthCookie(user.Username, false);
-                    return RedirectToAction("Index", "Home");
+                    //return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Logged", "Home", new { id = _user.ID });
                 }
                 else
                 {

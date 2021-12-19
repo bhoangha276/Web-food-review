@@ -63,13 +63,24 @@
                             @Html.ActionLink("Contact", "Index", "Contact", null, new { @class = "nav-link" })
                         </li>
                         <li class="dropdown">
-                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Hoàng
+                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                                @Session["name"]
                                 @*<i class="fas fa-user"></i>*@
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="/Login/Logout">Login</a>
+                                @{
+                                    if (Session["name"] == null)
+                                    {
+                                        <a class="dropdown-item" href="/Login/Logout">Login</a>
+                                    }
+                                    else
+                                    {
+                                        <a class="dropdown-item" href="/Login/Logout">Logout</a>
+                                    }
+                                }
+
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Logout</a>
+                                <a class="dropdown-item" href="#">Profile</a>
                             </div>
                         </li>
                     </ul>

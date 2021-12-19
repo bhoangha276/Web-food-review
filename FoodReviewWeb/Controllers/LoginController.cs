@@ -25,6 +25,8 @@ namespace FoodReviewWeb.Controllers
 
                 if (_user != null)
                 {
+                    Session["id"] = _user.ID;
+                    Session["name"] = _user.Name;
                     //Thành công
                     //Lưu trạng thái đăng nhập
                     FormsAuthentication.SetAuthCookie(user.Username, false);

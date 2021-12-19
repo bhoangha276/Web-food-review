@@ -17,7 +17,8 @@ namespace FoodReviewWeb.Controllers
         // GET: Recipe
         public ActionResult Index()
         {
-            var post = db.Post.Include(p => p.Account);
+            var idUser = (string)Session["id"];
+            var post = db.Post.Where( p => p.Author == idUser).Include(p => p.Account);
             return View(post.ToList());
         }
 

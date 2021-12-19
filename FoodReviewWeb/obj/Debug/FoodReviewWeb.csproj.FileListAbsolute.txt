@@ -417,7 +417,6 @@ D:\A_BaiTap\WebNangCao\FoodReview\FoodReviewWeb\obj\Debug\FoodReviewWeb.csproj.C
 D:\A_BaiTap\WebNangCao\FoodReview\FoodReviewWeb\obj\Debug\FoodReviewWeb.csproj.CopyComplete
 D:\A_BaiTap\WebNangCao\FoodReview\FoodReviewWeb\obj\Debug\FoodReviewWeb.dll
 D:\A_BaiTap\WebNangCao\FoodReview\FoodReviewWeb\obj\Debug\FoodReviewWeb.pdb
-D:\A_BaiTap\WebNangCao\FoodReview\FoodReviewWeb\obj\Debug\FoodReviewWeb.csprojAssemblyReference.cache
 D:\EPU\Web nâng cao\MVC\FoodReviewWeb\bin\FoodReviewWeb.dll.config
 D:\EPU\Web nâng cao\MVC\FoodReviewWeb\bin\FoodReviewWeb.dll
 D:\EPU\Web nâng cao\MVC\FoodReviewWeb\bin\FoodReviewWeb.pdb
@@ -478,3 +477,4 @@ D:\EPU\Web nâng cao\MVC\FoodReviewWeb\obj\Debug\FoodReviewWeb.csproj.CoreCompil
 D:\EPU\Web nâng cao\MVC\FoodReviewWeb\obj\Debug\FoodReviewWeb.csproj.CopyComplete
 D:\EPU\Web nâng cao\MVC\FoodReviewWeb\obj\Debug\FoodReviewWeb.dll
 D:\EPU\Web nâng cao\MVC\FoodReviewWeb\obj\Debug\FoodReviewWeb.pdb
+D:\A_BaiTap\WebNangCao\foodreview\FoodReviewWeb\obj\Debug\FoodReviewWeb.csprojAssemblyReference.cache

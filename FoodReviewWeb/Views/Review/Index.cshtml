@@ -12,7 +12,7 @@
                 <div class="col-lg-12">
                     <div class="text-content">
                         <h4>Recent Posts</h4>
-                        <h2>Our Recent Blog Entries</h2>
+                        <h2>Our Recent Food Review</h2>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                                     <div class="down-content">
                                         @*<span>Healthy</span>*@
                                         <a href=""><h4>@item.Title</h4></a>
-                                        @Html.ActionLink("Đọc thêm", "Detail", new { id = item.ID })
+                                        @Html.ActionLink("See more...", "Detail", new { id = item.ID })
                                         <ul class="post-info">
                                             <li><a href="#">User: @item.Author</a></li>
                                             <li><a href="#">@item.CreateAt</a></li>

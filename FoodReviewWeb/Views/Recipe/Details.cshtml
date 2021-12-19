@@ -1,0 +1,53 @@
+﻿@model FoodReviewWeb.Models.Framework.Post
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section style="margin-top:10px" class="blog-posts">
+    <div class="container">
+        <div class="all-blog-posts">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="blog-post">
+                        <div class="blog-thumb">
+                            <img src="  @Html.DisplayFor(model => model.Image)" alt="">
+                        </div>
+                        <div class="down-content">
+                            @*<span>Healthy</span>*@
+                            <a href=""><h4>@Html.DisplayFor(model => model.Title)</h4></a>
+                            <ul class="post-info">
+                                <li><a href="#">User:  @Html.DisplayFor(model => model.Account.Username) </a></li>
+                                <li><a href="#">  @Html.DisplayFor(model => model.CreateAt)</a></li>
+                                <li><a href="#"> @Html.DisplayFor(model => model.LikeCount) Like</a></li>
+                            </ul>
+                            <p> @Html.DisplayFor(model => model.Contents)</p>
+                            <div class="post-options">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul class="post-tags">
+                                            <li><i class="fa fa-tags"></i></li>
+                                            <li><a href="#">Best Templates</a>,</li>
+                                            <li><a href="#">TemplateMo</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="post-share">
+                                            <li><i class="fa fa-share-alt"></i></li>
+                                            <li><a href="#">Facebook</a>,</li>
+                                            <li><a href="#">Twitter</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="mb-2 d-flex justify-content-end">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ID },new { @class = "text-dark btn btn-warning mr-2" })
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "text-dark btn btn-warning" })
+        </p>
+    </div>
+</section>

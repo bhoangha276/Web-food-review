@@ -2156,10 +2156,14 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Intro\Index.cshtml" />
-    <Content Include="Views\Recipe\Index.cshtml" />
     <Content Include="Views\Review\Index.cshtml" />
     <Content Include="Views\Review\Detail.cshtml" />
     <Content Include="Views\Home\Logged.cshtml" />
+    <Content Include="Views\Recipe\Create.cshtml" />
+    <Content Include="Views\Recipe\Delete.cshtml" />
+    <Content Include="Views\Recipe\Details.cshtml" />
+    <Content Include="Views\Recipe\Edit.cshtml" />
+    <Content Include="Views\Recipe\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="~/Assets/User/assets/css/fontawesome.css">
     <link rel="stylesheet" href="~/Assets/User/assets/css/templatemo-stand-blog.css">
     <link rel="stylesheet" href="~/Assets/User/assets/css/owl.css">
+
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
 </head>
 <body>
     @*Header*@
@@ -58,8 +62,15 @@
                         <li class="nav-item">
                             @Html.ActionLink("Contact", "Index", "Contact", null, new { @class = "nav-link" })
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Login/Logout">Login</a>
+                        <li class="dropdown">
+                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Hoàng
+                                @*<i class="fas fa-user"></i>*@
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/Login/Logout">Login</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </div>
                         </li>
                     </ul>
                 </div>

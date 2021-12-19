@@ -1,99 +1,34 @@
-﻿
+﻿@model IEnumerable<FoodReviewWeb.Models.Framework.Post>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<div class="container contact mt-3">
-    <div class="row">
-        <div class="col-md-3">
-            <div class="contact-info">
-                <img class="rounded" style="width:100%; height:100%" src="https://i.pinimg.com/564x/a2/8e/b2/a28eb2113030c945c975d55a1a741c5a.jpg" alt="image" />
-                <img class="mt-5 rounded" style="width:100%; height:100%" src="https://tronhouse.com/assets/data/editor/source/FoodStyling/b%C3%ACa.jpg" alt="image" />
-                <h2 class="mt-4" style="text-align:center">Review with Us</h2>
-                <h4 style="text-align:center">We would love to hear from you !</h4>
-            </div>
-        </div>
-        <div class="col-md-9">
-            <div class="contact-form">
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="fname">ID:</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="fname" placeholder="Enter ID" name="fname">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="lname">Author:</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="lname" placeholder="Enter Author" name="lname">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Title:</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" placeholder="Enter Title" name="email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="comment">Content:</label>
-                    <div class="col-sm-10">
-                        <textarea class="form-control" rows="5" id="comment"></textarea>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Image:</label>
-                    <div class="col-sm-10">
-                        <form action="/action_page.php">
-                            <label for="img"></label>
-                            <input type="file" id="img" name="img" accept="image/*">
-                        </form>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Slug:</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" placeholder="Enter Slug" name="email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Like Count:</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" placeholder="Enter Like Count" name="email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Created At:</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" placeholder="Created At" name="email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Updated At:</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" placeholder="Updated At" name="email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Tag:</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" placeholder="Enter Tag" name="email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Category:</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" placeholder="Enter Category" name="email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-warning">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="container">
+    <div class="mt-3">
+        @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-warning text-dark" })
     </div>
+    @foreach (var item in Model)
+    {
+        <div class="card mb-3 mt-3" style="max-width: 1000px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="@item.Image" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"> @item.Title</h5>
+                        <p class="card-text">@item.Contents</p>
+                        <p class="card-text"><small class="text-muted">@item.CreateAt</small></p>
+                        <div>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-warning text-dark" }) 
+                        @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-warning text-dark" }) 
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-warning text-dark" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
 </div>
-
-
 

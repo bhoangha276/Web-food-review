@@ -33,6 +33,8 @@ namespace FoodReviewWeb.Controllers
             {
                 return HttpNotFound();
             }
+            //var lst = new List<Comment>();
+            //lst = db.Comment.Where(x=>x.PostID == id).OrderByDescending(x => x.ID).ToList();
             return View(post);
         }
     }

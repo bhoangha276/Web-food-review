@@ -477,4 +477,3 @@ D:\EPU\Web nâng cao\MVC\FoodReviewWeb\obj\Debug\FoodReviewWeb.csproj.CoreCompil
 D:\EPU\Web nâng cao\MVC\FoodReviewWeb\obj\Debug\FoodReviewWeb.csproj.CopyComplete
 D:\EPU\Web nâng cao\MVC\FoodReviewWeb\obj\Debug\FoodReviewWeb.dll
 D:\EPU\Web nâng cao\MVC\FoodReviewWeb\obj\Debug\FoodReviewWeb.pdb
-D:\A_BaiTap\WebNangCao\foodreview\FoodReviewWeb\obj\Debug\FoodReviewWeb.csprojAssemblyReference.cache

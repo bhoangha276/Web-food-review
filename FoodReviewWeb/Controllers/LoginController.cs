@@ -45,6 +45,7 @@ namespace FoodReviewWeb.Controllers
 
         public ActionResult Logout()
         {
+            // Hủy cookie đã lưu dưới Client
             FormsAuthentication.SignOut();
             return RedirectToAction("Index");
         }

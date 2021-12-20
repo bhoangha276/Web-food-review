@@ -28,13 +28,18 @@ namespace FoodReviewWeb.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            else
+            {
+                var cmt = new List<Comment>();
+                cmt = db.Comment.Where(x => x.PostID == id).OrderByDescending(x => x.ID).ToList();
+
+                Session["idCmt"] = cmt;
+            }
             Post post = db.Post.Find(id);
             if (post == null)
             {
                 return HttpNotFound();
             }
-            //var lst = new List<Comment>();
-            //lst = db.Comment.Where(x=>x.PostID == id).OrderByDescending(x => x.ID).ToList();
             return View(post);
         }
     }

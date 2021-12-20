@@ -6,7 +6,17 @@
 }
 <div class="container">
     <div class="mt-3">
-        @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-warning text-dark" })
+        @{
+            if (Session["id"] != null)
+            {
+                @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-warning text-dark" })
+            }
+            else
+            {
+                <h3 style="height:400px">You are not logged in!</h3>
+            }
+        }
+
     </div>
     @foreach (var item in Model)
     {

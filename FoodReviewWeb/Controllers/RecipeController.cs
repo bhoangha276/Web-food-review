@@ -17,6 +17,13 @@ namespace FoodReviewWeb.Controllers
         // GET: Recipe
         public ActionResult Index()
         {
+            //if (Session["id"] == null)
+            //{
+            //    string mess = "You are not logged in!";
+            //    string strBuilder = "<script language='javascript'>alert('" + mess + "')</script>";
+            //    Response.Write(strBuilder);
+            //}
+
             var idUser = (string)Session["id"];
             var post = db.Post.Where( p => p.Author == idUser).Include(p => p.Account);
             return View(post.ToList());

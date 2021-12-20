@@ -27,6 +27,7 @@ namespace FoodReviewWeb.Areas.Admin.Controllers
                 {
                     //Thành công
                     //Lưu trạng thái đăng nhập
+                    Session["user"] = _user;
                     FormsAuthentication.SetAuthCookie(user.Username, false);
                     return RedirectToAction("Index", "Home");
                 }
@@ -42,6 +43,7 @@ namespace FoodReviewWeb.Areas.Admin.Controllers
 
         public ActionResult Logout()
         {
+            // Hủy cookie đã lưu dưới Client
             FormsAuthentication.SignOut();
             return RedirectToAction("Index");
         }

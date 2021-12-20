@@ -1,0 +1,13 @@
+﻿@model List<FoodReviewWeb.Models.Framework.Comment>
+
+@foreach(var item in Model) {
+    <li>
+        <div class="author-thumb">
+            <img src="~/Assets/User/assets/images/comment-author-01.jpg" alt="">
+        </div>
+        <div class="right-content">
+            <h4>User: @item.UserID<span>@item.CreateAt</span></h4>
+            <p>@item.Contents</p>
+        </div>
+    </li>
+}

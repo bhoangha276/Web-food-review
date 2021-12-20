@@ -42,5 +42,13 @@ namespace FoodReviewWeb.Controllers
             }
             return View(post);
         }
+
+        public ActionResult Comment()
+        {
+            var lst = new List<Comment>();
+            lst = db.Comment.OrderByDescending(x => x.ID).ToList();
+
+            return PartialView(lst);
+        }
     }
 }

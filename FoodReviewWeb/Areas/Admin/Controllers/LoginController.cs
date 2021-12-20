@@ -16,7 +16,7 @@ namespace FoodReviewWeb.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(FoodReviewWeb.Areas.Admin.Data.DTO.User user)
+        public ActionResult Index(FoodReviewWeb.Areas.Admin.Data.DTO.User user, string ReturnUrl)
         {
             if (ModelState.IsValid)
             {
@@ -29,6 +29,12 @@ namespace FoodReviewWeb.Areas.Admin.Controllers
                     //Lưu trạng thái đăng nhập
                     Session["user"] = _user;
                     FormsAuthentication.SetAuthCookie(user.Username, false);
+                    string rs = Request.QueryString["ReturnUrl"];
+                    if(ReturnUrl != null)
+                    {
+                        return Redirect(ReturnUrl);
+                    }
+
                     return RedirectToAction("Index", "Home");
                 }
                 else

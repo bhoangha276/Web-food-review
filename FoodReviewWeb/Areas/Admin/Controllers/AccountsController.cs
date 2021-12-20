@@ -10,6 +10,7 @@ using FoodReviewWeb.Models.Framework;
 
 namespace FoodReviewWeb.Areas.Admin.Controllers
 {
+    [Authorize]
     public class AccountsController : Controller
     {
         private FoodReviewEntities1 db = new FoodReviewEntities1();

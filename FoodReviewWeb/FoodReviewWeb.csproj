@@ -139,6 +139,7 @@
     <Compile Include="Controllers\IntroController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RecipeController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2165,6 +2166,7 @@
     <Content Include="Views\Recipe\Edit.cshtml" />
     <Content Include="Views\Recipe\Index.cshtml" />
     <Content Include="Views\Review\Comment.cshtml" />
+    <Content Include="Views\Register\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

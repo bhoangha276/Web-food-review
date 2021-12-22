@@ -53,14 +53,14 @@
 
                                         <div class="form-group">
                                             @*<input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address...">*@
+                id="exampleInputEmail" aria-describedby="emailHelp"
+                placeholder="Enter Email Address...">*@
                                             @Html.TextBoxFor(model => model.Username, new { @class = "form-control form-control-user", @placeholder = "Tên đăng nhập..." })
                                             @Html.ValidationMessageFor(m => m.Username, null, new { @class = "text-danger" })
                                         </div>
                                         <div class="form-group">
                                             @*<input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">*@
+                id="exampleInputPassword" placeholder="Password">*@
                                             @Html.PasswordFor(model => model.Password, new { @class = "form-control form-control-user", @placeholder = "Mật khẩu" })
                                             @Html.ValidationMessageFor(m => m.Username, null, new { @class = "text-danger" })
                                         </div>
@@ -77,12 +77,15 @@
                                             Login
                                         </button>
                                         <hr>
-                                        <a href="index.html" class="btn btn-google btn-user btn-block">
+                                        <a href="/Admin/Login/Index" class="btn btn-facebook btn-user btn-block">
+                                            ADMINISTRATOR <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                        @*<a href="index.html" class="btn btn-google btn-user btn-block">
                                             <i class="fab fa-google fa-fw"></i> Login with Google
                                         </a>
                                         <a href="index.html" class="btn btn-facebook btn-user btn-block">
                                             <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                                        </a>
+                                        </a>*@
                                     }
                                     @*</form>*@
                                     <hr>

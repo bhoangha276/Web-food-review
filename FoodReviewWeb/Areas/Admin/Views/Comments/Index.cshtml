@@ -1,0 +1,84 @@
+﻿@model IEnumerable<FoodReviewWeb.Models.Framework.Comment>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Comments</h1>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <p>@Html.ActionLink("Create New", "Create")</p>
+
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        @*<th>@Html.DisplayNameFor(model => model.ID)</th>*@
+                        <th>
+                            @Html.DisplayNameFor(model => model.Contents)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CreateAt)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Account.Username)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Post.Author)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        @*<th>@Html.DisplayNameFor(model => model.ID)</th>*@
+                        <th>
+                            @Html.DisplayNameFor(model => model.Contents)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CreateAt)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Account.Username)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Post.Author)
+                        </th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            @*<th>@Html.DisplayNameFor(model => model.ID)</th>*@
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Contents)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CreateAt)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Account.Username)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Post.Author)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!-- /.container-fluid -->

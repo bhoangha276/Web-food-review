@@ -24,6 +24,7 @@ namespace FoodReviewWeb.Controllers
         }
         public ActionResult Detail(string id)
         {
+            Session["idPost"] = id;
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -40,15 +41,36 @@ namespace FoodReviewWeb.Controllers
             {
                 return HttpNotFound();
             }
+            Comment(id);
             return View(post);
         }
 
-        public ActionResult Comment()
+        public PartialViewResult Comment(string id)
         {
             var lst = new List<Comment>();
-            lst = db.Comment.OrderByDescending(x => x.ID).ToList();
+            lst = db.Comment.Where(x=>x.PostID==id).OrderByDescending(x => x.ID).ToList();
 
             return PartialView(lst);
+        }
+
+        public PartialViewResult CreateComment()
+        {
+            
+            return PartialView();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public PartialViewResult CreateComment([Bind(Include = "ID,PostID,UserID,Contents,CreateAt")] Comment cmt)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Comment.Add(cmt);
+                db.SaveChanges();
+            }
+
+
+            return PartialView(cmt);
         }
     }
 }

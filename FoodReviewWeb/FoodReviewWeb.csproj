@@ -2185,6 +2185,7 @@
     <Content Include="Views\Recipe\Index.cshtml" />
     <Content Include="Views\Review\Comment.cshtml" />
     <Content Include="Views\Register\Create.cshtml" />
+    <Content Include="Views\Review\CreateComment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

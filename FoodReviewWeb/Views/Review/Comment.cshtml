@@ -3,10 +3,10 @@
 @foreach(var item in Model) {
     <li>
         <div class="author-thumb">
-            <img src="~/Assets/User/assets/images/comment-author-01.jpg" alt="">
+            <img src="~/Assets/User/assets/images/@item.Account.Avatar" alt="">
         </div>
         <div class="right-content">
-            <h4>User: @item.UserID<span>@item.CreateAt</span></h4>
+            <h4>@item.Account.Name<span>@item.CreateAt</span></h4>
             <p>@item.Contents</p>
         </div>
     </li>

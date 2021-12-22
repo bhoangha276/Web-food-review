@@ -38,7 +38,7 @@
                                         <a href=""><h4>@item.Title</h4></a>
                                         @Html.ActionLink("See more...", "Detail", new { id = item.ID })
                                         <ul class="post-info">
-                                            <li><a href="#">User: @item.Author</a></li>
+                                            <li><a href="#">@item.Account.Name</a></li>
                                             <li><a href="#">@item.CreateAt</a></li>
                                             <li><a href="#">@item.LikeCount Like</a></li>
                                         </ul>

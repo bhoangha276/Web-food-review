@@ -31,9 +31,9 @@
     <!-- Custom styles for this template-->
     <!-- <link href="~/Assets/Admin/css/sb-admin-2.min.css" rel="stylesheet">-->
 </head>
-    <body>
-        @*Header*@
-        <!-- ***** Preloader Start ***** -->
+<body>
+    @*Header*@
+    <!-- ***** Preloader Start ***** -->
     <div id="preloader">
         <div class="jumper">
             <div></div>
@@ -92,10 +92,7 @@
                                     }
                                     else
                                     {
-                                        <a class="dropdown-item" href="">
-                                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Profile
-                                        </a>
+                                        @Html.ActionLink("Profile", "Index", "Profile", null, new { @class = "nav-link text-dark dropdown-item pl-5" })
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="/Login/Logout">
                                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -160,5 +157,5 @@
             }
         }
     </script>
-    </body>
+</body>
 </html>

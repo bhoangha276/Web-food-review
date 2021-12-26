@@ -27,6 +27,10 @@ namespace FoodReviewWeb.Controllers
                 {
                     Session["id"] = _user.ID;
                     Session["name"] = _user.Name;
+                    Session["email"] = _user.Email;
+                    Session["number"] = _user.Number;
+                    Session["avatar"] = _user.Avatar;
+                    Session["intro"] = _user.Intro;
                     //Thành công
                     //Lưu trạng thái đăng nhập
                     FormsAuthentication.SetAuthCookie(user.Username, false);
